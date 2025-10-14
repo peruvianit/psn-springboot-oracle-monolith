@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@//localhost:1521/XEPDB1
+    username: psn_user
+    password: psn_pwd
+    driver-class-name: oracle.jdbc.OracleDriver
+    
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.hibernate.SQL: DEBUG
+
+  freemarker:
+    cache: false
+    # abilita anche il loader su filesystem per aggiornare i .ftl senza rebuild
+    template-loader-path: classpath:/templates/, file:src/main/resources/templates/				
+server:
+  port: 8081

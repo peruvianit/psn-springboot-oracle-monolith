@@ -1,0 +1,83 @@
+spring:
+  application:
+    name: psn-springboot-oracle-monolith
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+        format_sql: true
+        show-sql: false
+
+  freemarker:
+    # cartelle template (classpath) – puoi aggiungere anche un path su file system in dev
+    template-loader-path: classpath:/templates/
+    suffix: .ftl
+    charset: UTF-8
+    content-type: text/html
+    check-template-location: true
+    prefer-file-system-access: true
+    # Impostazioni FreeMarker pure (passate tali e quali a Configuration#setSetting)
+    settings:
+      output_format: HTMLOutputFormat
+      auto_escaping_policy: enable_if_default
+      recognize_standard_file_extensions: true
+      tag_syntax: auto_detect
+      template_exception_handler: rethrow  # in prod valuta 'html_debug' solo in dev
+server:
+  port: 8080
+  servlet:
+    context-path: /app
+  error:
+    path: /error
+    whitelabel:
+      enabled: false
+    include-message: always
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: when-authorized
+
+############################################
+# Attributi applicazione 
+# 
+# application.profileContest.enabled: Abilitazione della sezione del Profilo 
+#                   e contesto. 
+# 
+############################################
+
+application:
+  title: WEB TEMPLATE
+  subtitle: Spring Boot
+  code: WTSB
+  profileContest:
+    enabled:true
+
+############################################
+# Configurazione menù applicazione 
+############################################
+  menu:
+    principale: WTSB_MAIN
+    posizione: LATERALE
+
+############################################
+# CDN
+############################################
+cdn:
+  enabled: false
+  url: 
+
+############################################
+# Google Analytics
+############################################
+google:
+  analytics:
+    enabled: false
+    id: UA-28411071-09
