@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@//test-db-host:1521/TESTPDB
+    username: psn_app_test
+    password: ${DB_PASSWORD:changeme}
+    driver-class-name: oracle.jdbc.OracleDriver
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
