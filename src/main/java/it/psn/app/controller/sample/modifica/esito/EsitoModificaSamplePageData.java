@@ -1,8 +1,8 @@
 package it.psn.app.controller.sample.modifica.esito;
 
+import it.psn.app.common.util.date.DateUtils;
 import it.psn.app.controller.PageData;
 import it.psn.app.service.sample.SampleView;
-import it.psn.appcommon.util.date.DateUtils;
 
 public class EsitoModificaSamplePageData extends PageData {
 

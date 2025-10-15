@@ -133,14 +133,14 @@ public class WebappControllerAdvise extends DefaultHandlerExceptionResolver {
 				 * Se non è stata trovata una voce di menu per la url sulla request, utilizzo
 				 * l'ultima voceMenuSelezionata che ho inserito in sessione
 				 */
-//				if (voceMenuSelezionata.getVoceMenuView() == null) {
-//					voceMenuSelezionata = (VoceMenuSelezionata) session
-//							.getAttribute(VoceMenuSelezionata.ATTRIBUTE_NAME);
-//					if (voceMenuSelezionata != null) {
-//						selectableMenuViews = SelectableMenuView.selezionaSelectableMenuViewsPerIdVoceMenuView(
-//								menuViews, voceMenuSelezionata.getVoceMenuView().getId(), codiciMenu);
-//					}
-//				}
+				if (voceMenuSelezionata.getVoceMenuView() == null) {
+					voceMenuSelezionata = (VoceMenuSelezionata) session
+							.getAttribute(VoceMenuSelezionata.ATTRIBUTE_NAME);
+					if (voceMenuSelezionata != null) {
+						selectableMenuViews = SelectableMenuView.selezionaSelectableMenuViewsPerIdVoceMenuView(
+								menuViews, voceMenuSelezionata.getVoceMenuView().getId(), codiciMenu);
+					}
+				}
 
 				session.setAttribute(VoceMenuSelezionata.ATTRIBUTE_NAME, voceMenuSelezionata);
 
@@ -181,7 +181,7 @@ public class WebappControllerAdvise extends DefaultHandlerExceptionResolver {
                         null,                 // utenteView
                         selectableMenuViews,  // selectableMenuViews
                         titolo,
-                        null,                 // breadcrumb
+                        breadcrumb,           // breadcrumb
                         applicationTitle,
                         applicationSubtitle,
                         "$urlAreaRiservata",

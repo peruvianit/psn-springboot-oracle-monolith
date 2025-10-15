@@ -1,7 +1,7 @@
 /**
  * 
  */
-package it.psn.appcommon.util.date;
+package it.psn.app.common.util.date;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

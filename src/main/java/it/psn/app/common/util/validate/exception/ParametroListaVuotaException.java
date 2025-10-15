@@ -1,4 +1,4 @@
-package it.psn.appcommon.util.date.validate.validate.exception;
+package it.psn.app.common.util.validate.exception;
 
 public class ParametroListaVuotaException extends Exception {
 

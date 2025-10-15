@@ -2,8 +2,8 @@ package it.psn.app.controller.sample.cancella.esito;
 
 import java.time.LocalDateTime;
 
+import it.psn.app.common.util.date.DateUtils;
 import it.psn.app.controller.PageData;
-import it.psn.appcommon.util.date.DateUtils;
 
 public class EsitoCancellaSamplePageData extends PageData {
 

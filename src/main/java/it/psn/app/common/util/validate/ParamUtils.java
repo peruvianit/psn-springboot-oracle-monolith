@@ -1,12 +1,12 @@
 /**
  * 
  */
-package it.psn.appcommon.util.date.validate;
+package it.psn.app.common.util.validate;
 
 import java.util.Collection;
 
-import it.psn.appcommon.util.date.validate.validate.exception.ParametroAssenteException;
-import it.psn.appcommon.util.date.validate.validate.exception.ParametroListaVuotaException;
+import it.psn.app.common.util.validate.exception.ParametroAssenteException;
+import it.psn.app.common.util.validate.exception.ParametroListaVuotaException;
 
 /**
  * Validazione parametri in input. 

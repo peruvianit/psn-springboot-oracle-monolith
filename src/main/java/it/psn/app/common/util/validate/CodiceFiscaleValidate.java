@@ -1,4 +1,4 @@
-package it.psn.appcommon.util.date.validate;
+package it.psn.app.common.util.validate;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
